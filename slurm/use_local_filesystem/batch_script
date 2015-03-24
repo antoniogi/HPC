@@ -1,4 +1,13 @@
 #!/bin/bash
+
+##########################################
+##
+## Texas Advanced Computing Center
+## Antonio Gomez (agomez@tacc.utexas.edu)
+## 2015
+##
+##########################################
+
 #SBATCH -J job_name
 #SBATCH -o job_name.o%j
 #SBATCH -e job_name.e%j

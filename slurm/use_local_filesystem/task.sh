@@ -1,5 +1,13 @@
 #!/bin/bash
 
+##########################################
+##
+## Texas Advanced Computing Center
+## Antonio Gomez (agomez@tacc.utexas.edu)
+## 2015
+##
+##########################################
+
 # Retrieve my rank
 rank=$(( ${PMI_RANK-0} + ${PMI_ID-0} + ${MPIRUN_RANK-0} + ${OMPI_COMM_WORLD_RANK-0} + ${OMPI_MCA_ns_nds_vpid-0} ))
 echo $rank
