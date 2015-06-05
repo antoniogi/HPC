@@ -1,0 +1,37 @@
+#!/bin/bash
+
+##########################################
+##
+## Texas Advanced Computing Center
+## Antonio Gomez (agomez@tacc.utexas.edu)
+## 2015
+##
+##########################################
+
+#SBATCH -J job_name
+#SBATCH -o job_name.o%j
+#SBATCH -e job_name.e%j
+#SBATCH -n xxx
+#SBATCH -p normal
+#SBATCH -t 0:30:00
+#SBATCH -A allocation
+
+# ---------
+# Load your modules and initialize your environment here
+# ---------
+module load ...
+module load ...
+export ...=....
+
+# ---------
+# Execute task.sh with ibrun. Make sure that you run:
+# chmod +x task.sh
+# before
+# ---------
+time ibrun ./task.sh
+
+# if there are files that need to be put together and those files where copied
+# from each local disk to here (see task.sh):
+
+# cat output_file.* > output_file
+# rm output_file.*
