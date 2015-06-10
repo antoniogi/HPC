@@ -37,9 +37,7 @@ template<> class range<std::string> {
     
     void operator++ (int) {++pos;}
     void operator++ () {++pos;}
-    bool operator!=(const range &){
-      return pos!=_st.length();
-    }
+    bool operator!=(const range &) { return pos!=_st.length(); }
     char operator* () { return _st[pos];}
 };
 
